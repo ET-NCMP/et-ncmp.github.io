@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>4 Presentation of Uncertainty</title>
+</head>
+<body>
+<h1>4 Presentation of Uncertainty</h1>
+<p>
+At present, some groups provide explicit uncertainty estimates based on their analysis techniques [Kaplan et al., 1998; Smith et al., 2008; Kennedy et al., 2011b, 2011c, Ishii et al., 2005; Hirahara et al., 2013]. The uncertainty estimates derived from a particular analysis will tend to misestimate the true uncertainty because they rely on the analysis method and the assumptions on which it is based being correct.
+</p><p>
+Comparing uncertainty estimates provided with analyses can be difficult because not all analyses consider the same sources of uncertainties. Consequently, a narrower uncertainty range does not necessarily imply a better analysis. One way that data set providers could help users is to provide an inventory of sources of uncertainty that have been considered either explicitly or implicitly. This would allow users to assess the relative maturity of the uncertainty analysis.
+</p><p>
+There is a further difficulty in supplying and using uncertainty estimates: the traditional means of displaying uncertainties  the error bar, or error range  does not preserve the covariance structure of the uncertainties. Unfortunately, storing covariance information for all but the lowest resolution data sets can be prohibitively expensive. EOF-based analyses, like that of Kaplan et al. [1998], could in principle efficiently store the spatial-error covariances because only the covariances of the reduced space of principal components need to be kept. For Kaplan et al. [1998], based on a reduced space of only 80 EOFs, this is a matrix of order 802 elements for each time step as opposed to 10002 elements for the full-field covariance matrix. The difficulty with this approach is that not all variability can be resolved by the leading EOFs and excluding higher-order EOFs will underestimate the full uncertainty.
+</p><p>
+Karspeck et al. [2012] drew samples from the posterior probability produced by their analysis. Each sample provides an SST field that is consistent with the available observations and the estimated covariance structure. Sampling has the added advantage that it can be combined easily with Monte-Carlo samples from the measurement bias distributions. However, production of samples is not always computationally efficient. Karspeck et al. [2012] were able to do it for the North Atlantic region, but the computational costs of extending the analysis unchanged to the rest of the world could be prohibitive. Kennedy et al. [2011c] provided an ensemble of 100 interchangeable realizations of their bias-adjusted data set, HadSST3. The ensemble spans parametric uncertainties in their adjustment method.
+</p><p>
+By providing a set of plausible realizations of a data set, or alternatively by providing plausible realizations of typical measurement errors [Mears et al., 2011], it can be relatively easy for users to assess the sensitivity of their analysis to uncertainties in SST data. For example, individual ensemble members of HadSST3 were used in Tokinaga et al. [2012], along with other SST analyses, to show that their results were robust to the estimated bias uncertainties in SSTs. 
+</p><p>
+Another approach [Merchant et al. 2013] is to separate out components of the uncertainty that correlate at different scales. Random measurement errors, such as sensor noise, are uncorrelated. Some uncertainties, for example those related to water vapor in a satellite view, are correlated at a synoptic scale. Yet others are correlated at all times and places. Grouping uncertainties in this way allows users to propagate uncertainty information more easily.
+</p>
+<p><a href="3.7.html">Previous</a> <a href="index.html">Index</a> <a href="5.html">Next</a></p>
+</body>
+</html>
