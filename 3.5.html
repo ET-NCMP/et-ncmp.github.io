@@ -1,8 +1,20 @@
+<!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="sst_review_style.css">
 <title>3.5 Reconstruction Techniques and Other Structural Choices</title>
 </head>
 <body>
+<div class="row">
+  <div class="column side">
+  <p></p>
+  </div>
+  <div class="column middle">
+<p>
+<a href="3.4.3.html">Previous - 3.4.3 Summary of Sampling Uncertainty</a> 
+<a href="index.html">Index</a> 
+<a href="3.5.1.html">Next - 3.5.1 Critique of Reconstruction Techniques</a>
+</p>
 <h1>3.5 Reconstruction Techniques and Other Structural Choices</h1>
 <p>
 Creating global SST analyses is challenging because of the relative sparseness of observations before the satellite era and the non-stationarity of the changing climate. A large number of different SST data sets based on in situ data have been produced employing a variety of statistical methods. The structural uncertainties associated with estimating SSTs in data voids and at data-sparse times are therefore somewhat better explored than structural uncertainties in the pervasive systematic errors. Data sets used in this paper have been summarized in Table 5 and global averages for these data sets are shown in Figure 5. 
@@ -10,27 +22,33 @@ Creating global SST analyses is challenging because of the relative sparseness o
 
 <center>
 <table>
-<tr><td><b>Data set</b></td><td><b>Input data set</b></td><td><b>Interpolation method</b></td><td><b>Resolution</b></td></tr>
-<tr><td>ICOADS summaries [Woodruff et al., 2011]</td><td>ICOADS 2.5</td><td>None</td><td>2°x2° monthly</td></tr>
-<tr><td>HadSST2 [Rayner et al., 2006]</td><td>ICOADS 2.1</td><td>None</td><td>5°x5° monthly</td></tr>
-<tr><td>HadSST3 [Kennedy et al., 2011b; Kennedy et al., 2011c]</td><td>ICOADS 2.5</td><td>None</td><td>5°x5° monthly</td></tr>
-<tr><td>TOHOKU [Yasunaka and Hanawa, 2002]</td><td>ICOADS 2.1</td><td>None</td><td>5°x5° monthly</td></tr>
-<tr><td>HadISST1.1 [Rayner et al., 2003]</td><td>Met Office Marine Databank and COADS, AVHRR satellite retrievals</td><td>Reduced Space Optimal Interpolation</td><td>1°x1° monthly</td></tr>
-<tr><td>ERSSTv3b [Smith et al., 2008]</td><td>ICOADS 2.1</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2°x2° monthly</td></tr>
-<tr><td>ERSSTv4 [Huang et al., 2015]</td><td>ICOADS 2.5</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2°x2° monthly</td></tr>
-<tr><td>ERSSTv5 [Huang et al., 2017]</td><td>ICOADS 3.0</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2°x2° monthly</td></tr>
-<tr><td>COBE [Ishii et al., 2005]</td><td>ICOADS 2.1 and Kobe collection</td><td>Optimal interpolation</td><td>1°x1° monthly</td></tr>
-<tr><td>COBE-2 [Hirahara et al., 2013]</td><td>ICOADS 2.5 and Kobe collection, AVHRR satellite retrievals</td><td>Multi scale analysis based on EOFs</td><td>1°x1° daily and monthly</td></tr>
-<tr><td>Kaplan [Kaplan et al., 1998]</td><td>Met Office Marine Databank</td><td>Reduced Space Optimal Smoothing</td><td>5°x5° monthly</td></tr>
-<tr><td>NOCS [Berry and Kent, 2011]</td><td>ICOADS 2.5</td><td>Optimal Interpolation</td><td>1°x1° daily and monthly</td></tr>
-<tr><td>VBPCA [Ilin and Kaplan, 2009]</td><td>ICOADS 2.5</td><td>Variational Bayesian Principal Component Analysis</td><td>5°x5° monthly</td></tr>
-<tr><td>GPFA [Luttinen and Ilin, 2009]</td><td>ICOADS 2.5</td><td>Gaussian Process Factor Analysis</td><td>5°x5° monthly</td></tr>
-<tr><td>GP [Luttinen and Ilin,2012]</td><td>ICOADS 2.5</td><td>Gaussian Process</td><td>5°x5° monthly</td></tr>
+<tr><th><b>Data set</b></th><th><b>Input data set</b></th><th><b>Interpolation method</b></th><th><b>Resolution</b></th></tr>
+<tr><td>ICOADS summaries [Woodruff et al., 2011]</td><td>ICOADS 2.5</td><td>None</td><td>2&deg;x2&deg; monthly</td></tr>
+<tr><td>HadSST2 [Rayner et al., 2006]</td><td>ICOADS 2.1</td><td>None</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>HadSST3 [Kennedy et al., 2011b; Kennedy et al., 2011c]</td><td>ICOADS 2.5</td><td>None</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>TOHOKU [Yasunaka and Hanawa, 2002]</td><td>ICOADS 2.1</td><td>None</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>HadISST1.1 [Rayner et al., 2003]</td><td>Met Office Marine Databank and COADS, AVHRR satellite retrievals</td><td>Reduced Space Optimal Interpolation</td><td>1&deg;x1&deg; monthly</td></tr>
+<tr><td>ERSSTv3b [Smith et al., 2008]</td><td>ICOADS 2.1</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2&deg;x2&deg; monthly</td></tr>
+<tr><td>ERSSTv4 [Huang et al., 2015]</td><td>ICOADS 2.5</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2&deg;x2&deg; monthly</td></tr>
+<tr><td>ERSSTv5 [Huang et al., 2017]</td><td>ICOADS 3.0</td><td>Separate low and high frequency reconstructions. High frequency component based on EOTs</td><td>2&deg;x2&deg; monthly</td></tr>
+<tr><td>COBE [Ishii et al., 2005]</td><td>ICOADS 2.1 and Kobe collection</td><td>Optimal interpolation</td><td>1&deg;x1&deg; monthly</td></tr>
+<tr><td>COBE-2 [Hirahara et al., 2013]</td><td>ICOADS 2.5 and Kobe collection, AVHRR satellite retrievals</td><td>Multi scale analysis based on EOFs</td><td>1&deg;x1&deg; daily and monthly</td></tr>
+<tr><td>Kaplan [Kaplan et al., 1998]</td><td>Met Office Marine Databank</td><td>Reduced Space Optimal Smoothing</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>NOCS [Berry and Kent, 2011]</td><td>ICOADS 2.5</td><td>Optimal Interpolation</td><td>1&deg;x1&deg; daily and monthly</td></tr>
+<tr><td>VBPCA [Ilin and Kaplan, 2009]</td><td>ICOADS 2.5</td><td>Variational Bayesian Principal Component Analysis</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>GPFA [Luttinen and Ilin, 2009]</td><td>ICOADS 2.5</td><td>Gaussian Process Factor Analysis</td><td>5&deg;x5&deg; monthly</td></tr>
+<tr><td>GP [Luttinen and Ilin,2012]</td><td>ICOADS 2.5</td><td>Gaussian Process</td><td>5&deg;x5&deg; monthly</td></tr>
 </table>
 <p><i><b>Table 5</b>: List of datasets used and referred to in the review.</i></p>
 </center>
 
-<p><a href="3.4.3.html">Previous</a> <a href="index.html">Index</a> <a href="3.5.1.html">Next</a></p>
+<p>
+<a href="3.4.3.html">Previous - 3.4.3 Summary of Sampling Uncertainty</a> 
+<a href="index.html">Index</a> 
+<a href="3.5.1.html">Next - 3.5.1 Critique of Reconstruction Techniques</a>
+</p>
 <br><br><br><br>
+</div>
+</div>
 </body>
 </html>
