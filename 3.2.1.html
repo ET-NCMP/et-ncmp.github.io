@@ -1,8 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<link rel="stylesheet" type="text/css" href="sst_review_style.css">
 </head>
 <body>
+<div class="row">
+  <div class="column side">
+  <p></p>
+  </div>
+  <div class="column middle">
+<p>
+<a href="3.2.html">Previous - 3.2 Individual Observational Errors</a> 
+<a href="index.html">Index</a> 
+<a href="3.2.2.html">Next - 3.2.2 Uncorrelated and Systematic Measurement Errors</a>
+</p>
 <h1>3.2.1 Uncorrelated Measurement Errors</h1>
 <p>
 Many estimates of uncorrelated observational error uncertainty have been made. Although thermometers issued to ships by many port meteorological officers are calibrated, such calibration information is not routinely published, nor is there any guarantee that the temperature of a water sample measured by a well calibrated thermometer is equal to the actual SST when the sample has spent time in a bucket, or passed through the pipe work of a ship. Consequently, estimates of measurement uncertainty from the literature are empirical estimates derived from considerations of the variance of the data: for example, spatial [Lindau, 2003; Kent and Challenor, 2006; Emery et al., 2001] and temporal [Stubbs, 1965] semivariograms, by comparing collocated observations [O'Carroll et al., 2008], by resampling [Shen et al., 2007], by using the variation of the variance with the number of observations [Rayner et al., 2006], or by comparison with a background field [Kent and Berry, 2008; Xu and Ignatov, 2010; Ingleby, 2010; Kennedy et al., 2011a; Atkinson et al., 2013]. Some of the analyses did not distinguish between uncorrelated observational errors and systematic observational errors, tending to combine them into one estimate. In addition it is not always easy to separate the effects of spatial sampling from measurement errors particularly in regions of high SST variability [Castro et al., 2012].
@@ -11,23 +22,23 @@ A single SST measurement from a ship has a typical combined uncorrelated and sys
 </p>
 <center>
 <table>
-<tr><td><b>References</b></td> <td><b>Estimated measurement uncertainty for ship measurements</b></td></tr>
-<tr><td>Stubbs [1965]</td> <td>0.11±0.01K for canvas bucket measurements from an Ocean Weather Ship</td></tr>
+<tr><th><b>References</b></th> <th><b>Estimated measurement uncertainty for ship measurements</b></th></tr>
+<tr><td>Stubbs [1965]</td> <td>0.11&plusmn;0.01K for canvas bucket measurements from an Ocean Weather Ship</td></tr>
 <tr><td>Strong and McLean [1984]</td> <td>1.8K RMS difference between ship and AVHRR data</td></tr>
 <tr><td>Bernstein and Chelton [1985] pg 11620</td> <td>1.1K</td></tr>
 <tr><td>Sarachik [1984], Weare [1989] pg 359</td> <td>1K</td></tr>
 <tr><td>Wilkerson and Earle [1990] pg 3381</td> <td>3.5K</td></tr>
 <tr><td>Cummings [2005] Table 1, pg 3592</td> <td>1.3 K (ERI) 0.6 K (Hull sensor) 1.2 K (bucket) </td></tr>
-<tr><td>Kent and Challenor [2006] pg 484</td> <td>1.2±0.4 K or 1.3±0.3 K depending on how measurements were weighted</td></tr>
-<tr><td>Kent et al. [1999] abstract</td> <td>1.5±0.1 K</td></tr>
-<tr><td>Kent and Berry [2005] Table 2 pg 853</td> <td>1.3±0.1 K and 1.2±0.1 K</td></tr>
+<tr><td>Kent and Challenor [2006] pg 484</td> <td>1.2&plusmn;0.4 K or 1.3&plusmn;0.3 K depending on how measurements were weighted</td></tr>
+<tr><td>Kent et al. [1999] abstract</td> <td>1.5&plusmn;0.1 K</td></tr>
+<tr><td>Kent and Berry [2005] Table 2 pg 853</td> <td>1.3&plusmn;0.1 K and 1.2&plusmn;0.1 K</td></tr>
 <tr><td>Reynolds et al. [2002] pg 1613</td> <td>1.3K</td></tr>
 <tr><td>Kennedy et al. [2011a] pg 83</td> <td>1.0K</td></tr>
 <tr><td>Ingleby [2010] Table 10 pg 1487</td> <td>0.9 K for automatic systems 1.2 K for manual measurements</td></tr>
 <tr><td>Kent and Berry [2008] Table 5a pg 11</td> <td>1.1K</td></tr>
 <tr><td>Xu and Ignatov [2010] pg 16 of 18</td> <td>1.16K</td></tr> 
 </table>
-<p><i><b>Table 1</b>: List of estimates of measurement error uncertainties for ships where uncorrelated and systematic errors were not dealt with separately.</i></p>
+<p class="caption"><i><b>Table 1</b>: List of estimates of measurement error uncertainties for ships where uncorrelated and systematic errors were not dealt with separately.</i></p>
 </center>
 <p>
 Measurements are not all of identical quality. Kent and Challenor [2006] showed that in the period 1970-1997 the uncertainties of measurements from ships varied with location, time, measurement method and the country that recruited the ship. Uncertainties were estimated to be larger in the mid-1970s probably due to data being incorrectly transmitted in real time in the early days of the Global Telecommunication System. Their estimated uncertainty for engine room measurements was larger than for bucket measurements. Tabata [1978a] noted that bucket measurements could be accurate to 0.15 K, but that ERI measurements were nearly an order of magnitude worse (1.16 K). Ingleby [2010] estimated uncertainties for different subsets of the data and noted that manual VOSclim (a high-quality subset of the VOS fleet) measurements and automated measurements were of slightly higher quality than manual ship measurements in general. Beggs et al. [2012] showed that Australia Integrated Marine Observing System ships had uncertainties comparable to those from data buoys. Analyses that have looked at statistics for individual ships and buoys have found that some ships and buoys take much higher quality measurements than others [Kent and Berry, 2008; Brasnett, 2008; Kennedy et al., 2011a; Atkinson et al., 2013]. The subset of ships (around 40-50% of ship observations) that passed the more stringent quality control procedures of Atkinson et al. [2013] had significantly lower measurement uncertainties assessed using the method of Kennedy et al. [2011a] than did the full fleet of ships. Early results on hull sensors reported by Emery et al. [1997] indicated the potential for these sensors to make accurate measurements. Indeed, Kent et al. [1993] found that hull sensors installed on ships in the Voluntary Observing Ships Special Observing Project for the North Atlantic (VSOP-NA) gave consistent measurements during the two year observing period.
@@ -37,7 +48,7 @@ Drifting buoy measurements are generally more accurate and consistent than ship 
 
 <center>
 <table>
-<tr><td><b>References</b></td> <td><b>Estimated measurement uncertainty for drifting buoy measurements</b></td></tr>
+<tr><th><b>References</b></th> <th><b>Estimated measurement uncertainty for drifting buoy measurements</b></th></tr>
 <tr><td>Strong and Mclean [1984]</td> <td>0.6K RMS difference between drifter and AVHRR</td></tr>
 <tr><td>Reynolds et al. [2002] pg 1613</td> <td>0.5K</td></tr>
 <tr><td>Emery et al. [2001] pg 2393</td> <td>0.3K</td></tr>
@@ -50,7 +61,7 @@ Drifting buoy measurements are generally more accurate and consistent than ship 
 <tr><td>Merchant et al. [2012] Table 2 pg 8 of 18</td> <td>0.15-0.19K</td></tr>
 <tr><td></td> <td></td></tr>
 </table>
-<p><i><b>Table 2</b>: List of estimates of measurement error uncertainties for drifting buoys where uncorrelated and systematic errors were not dealt with separately.</i></p>
+<p class="caption"><i><b>Table 2</b>: List of estimates of measurement error uncertainties for drifting buoys where uncorrelated and systematic errors were not dealt with separately.</i></p>
 </center>
 
 <p>
@@ -59,22 +70,26 @@ Moored buoys have received less attention. Estimates of the measurement uncertai
 
 <center>
 <table>
-<tr><td><b>References</b></td><td><b>Estimated measurement uncertainty for moored buoy measurements</b></td></tr>
+<tr><th><b>References</b></th><th><b>Estimated measurement uncertainty for moored buoy measurements</b></th></tr>
 <tr><td>Cummings [2005] Table 1, pg 3592</td><td>0.05K</td></tr>
 <tr><td>Kent and Berry [2008] Table 5b pg 11</td><td>0.4K</td></tr>
 <tr><td>Kennedy et al. [2011a] pg 83</td><td>tropical moorings, 0.12 K; all moorings, 0.21 K</td></tr>
 <tr><td>Xu and Ignatov [2010] pg 16 of 18</td><td>tropical moorings, 0.30 K; coastal moorings, 0.39 K</td></tr>
 <tr><td>Gilhousen [1987] Table 6 pg 104</td><td>0.22K</td></tr>
 </table>
-<p><i><b>Table 3</b>: List of estimates of measurement error uncertainties for moored buoys where uncorrelated and systematic errors were not dealt with separately.</i></p>
+<p class="caption"><i><b>Table 3</b>: List of estimates of measurement error uncertainties for moored buoys where uncorrelated and systematic errors were not dealt with separately.</i></p>
 </center>
 
 <p>
 As noted in section 2, uncorrelated observational errors are of relatively minor importance in large-scale averages (see Figure 8 and section 3.5), particularly in the modern period when observations are numerous. For an uncertainty of 1.0 K for a single observation due to uncorrelated observational error, the resulting uncertainty of a global annual average based on 10000 observations would be of order 0.01 K.
 </p>
 <p>
-<a href="3.2.html">Previous</a> <a href="index.html">Index</a> <a href="3.2.2.html">Next</a>
+<a href="3.2.html">Previous - 3.2 Individual Observational Errors</a> 
+<a href="index.html">Index</a> 
+<a href="3.2.2.html">Next - 3.2.2 Uncorrelated and Systematic Measurement Errors</a>
 </p>
 <br><br><br><br>
+</div>
+</div>
 </body>
 </html>
