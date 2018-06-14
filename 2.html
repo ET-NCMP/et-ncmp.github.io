@@ -1,11 +1,31 @@
+<!DOCTYPE html>
 <html>
 <head>
+<head>
+<link rel="stylesheet" type="text/css" href="sst_review_style.css">
+</head>
 <title>General classification of uncertainties</title>
 </head>
 <body>
-<h1>General classification of uncertainties</h1>
+<div class="row">
+  <div class="column side">
+  <p></p>
+  </div>
+  <div class="column middle">
+<p><a href="1.html">Previous - Introduction</a> <a href="index.html">Index</a> <a href="3.html">Next - The current state of uncertainty in in situ SST analyses</a></p>
+  <h1>General classification of uncertainties</h1>
 <p>
-Throughout this review the distinction will be made between an error and an uncertainty. The distinction between the two loosely follows the usage in the Guide to the Expression of Uncertainty in Measurement (GUM) [BIPM, 2008]. The error in a measurement is the difference between some idealized “true value” and the measured value and is unknowable. The GUM defines the uncertainty of a measurement as the “parameter, associated with the result of a measurement, that characterizes the dispersion of the values that could reasonably be attributed to the measurand”. This is the sense in which uncertainty is generally meant in the following discussion. This is not necessarily the same usage as is found in the cited papers. It is common to see the word error used as a synonym for uncertainty such as in the commonly used phrases <i>standard error</i> and <i>analysis error</i>.
+Throughout this review the distinction will be made between an error and an 
+uncertainty. The distinction between the two loosely follows the usage in the 
+Guide to the Expression of Uncertainty in Measurement (GUM) [BIPM, 2008]. The 
+error in a measurement is the difference between some idealized "true value" and 
+the measured value and is unknowable. The GUM defines the uncertainty of a measurement 
+as the "parameter, associated with the result of a measurement, that characterizes 
+the dispersion of the values that could reasonably be attributed to the measurand". 
+This is the sense in which uncertainty is generally meant in the following discussion. 
+This is not necessarily the same usage as is found in the cited papers. It is common 
+to see the word error used as a synonym for uncertainty such as in the commonly used 
+phrases <i>standard error</i> and <i>analysis error</i>.
 </p><p>
 Broadly speaking, errors in individual SST observations have been split into two groupings: <b>uncorrelated observational errors</b> (often referred to as random or independent errors) and <b>systematic observational errors</b>. Although this is a convenient way to deal with the uncertainties, errors in SST measurements will generally share a little of the characteristics of each. More recent literature, particularly associated with satellite retrievals, also deals with <b>locally-correlated errors</b> also known as synoptically-correlated errors.
 </p><p>
@@ -25,15 +45,42 @@ In Kennedy et al., [2011b] two forms of this uncertainty were considered: <b>gri
 </p><p>
 Although some gridded SST data sets contain many grid boxes which are not assigned an SST value because they contain no measurements, other SST data sets  oftentimes referred to as SST analyses  use a variety of techniques to fill the gaps. They use information gleaned from data-rich periods to estimate the parameters of statistical models that are then used to estimate SSTs in the data voids, often by interpolation or pattern fitting. There are many ways to tackle this problem and all are necessarily approximations to the truth. The correctness of the analysis uncertainty estimates derived from these statistical methods are conditional upon the correctness of the methods, inputs and assumptions used to derive them. No method is correct therefore analytic uncertainties based on a particular method will not give a definitive estimate of the true uncertainty. To gain an appreciation of the full uncertainty it is necessary to factor in the lack of knowledge about the correct methods to use, which brings the discussion back to structural uncertainty.
 </p><p>
-There are many scientifically defensible ways to produce a data set. For example, one might choose to fill gaps in the data by projecting a set of Empirical Orthogonal Functions (EOFs) onto the available data. Alternatively, one might opt to fill the data using simple optimal interpolation. Both are defensible approaches to the problem, but each will give different results. In the process of creating any data set, many such choices are made. <b>Structural uncertainty</b> [Thorne et al., 2005] is the term used to understand the spread that arises from the many choices and foundational assumptions that can be (and have to be) made during data set creation. The character of structural uncertainty is somewhat different to the other uncertainties considered so far. The uncertainty associated with a measurement error, for example, assumes that there is some underlying distribution that characterizes the dispersion of the measured values. In contrast, there is generally no underlying “distribution of methods” that can be used to quantify the structural uncertainty. Furthermore, the diverse approaches taken by different teams might reflect genuine scientific differences about the nature of the problems to be tackled. Consequently, structural uncertainty is one of the more difficult uncertainties to quantify or explore efficiently. It requires multiple, independent attempts to resolve the same difficulties, it is an ongoing commitment, and it does not guarantee that the true value will be encompassed by those independent estimates. Nevertheless, the role that the creation of multiple independent estimates and their comparison has played in uncovering, resolving, and quantifying some of the more mystifying uncertainties in climate analyses is unquestionable. The most obvious  one might say, notorious  examples are those of tropospheric temperature records made using satellites and radiosondes [Thorne et al., 2011] and sub-surface ocean temperature analyses [Lyman et al., 2010; Abraham et al., 2013].
+There are many scientifically defensible ways to produce a data set. For example, one 
+might choose to fill gaps in the data by projecting a set of Empirical Orthogonal 
+Functions (EOFs) onto the available data. Alternatively, one might opt to fill the data 
+using simple optimal interpolation. Both are defensible approaches to the problem, but 
+each will give different results. In the process of creating any data set, many such 
+choices are made. <b>Structural uncertainty</b> [Thorne et al., 2005] is the term used 
+to understand the spread that arises from the many choices and foundational assumptions 
+that can be (and have to be) made during data set creation. The character of structural 
+uncertainty is somewhat different to the other uncertainties considered so far. The 
+uncertainty associated with a measurement error, for example, assumes that there is 
+some underlying distribution that characterizes the dispersion of the measured values. 
+In contrast, there is generally no underlying "distribution of methods" that can be 
+used to quantify the structural uncertainty. Furthermore, the diverse approaches taken 
+by different teams might reflect genuine scientific differences about the nature of 
+the problems to be tackled. Consequently, structural uncertainty is one of the more 
+difficult uncertainties to quantify or explore efficiently. It requires multiple, 
+independent attempts to resolve the same difficulties, it is an ongoing commitment, 
+and it does not guarantee that the true value will be encompassed by those independent 
+estimates. Nevertheless, the role that the creation of multiple independent estimates 
+and their comparison has played in uncovering, resolving, and quantifying some of the 
+more mystifying uncertainties in climate analyses is unquestionable. The most obvious 
+one might say, notorious  examples are those of tropospheric temperature records made 
+using satellites and radiosondes [Thorne et al., 2011] and sub-surface ocean temperature 
+analyses [Lyman et al., 2010; Abraham et al., 2013].
 </p><p>
 Which leads finally to <b>unknown unknowns</b>. On February 12th 2002, at a news briefing at the US Department of Defense, Donald Rumsfeld memorably divided the world of knowledge into three quarters:
 </p><blockquote>
-    <i>“There are known knowns. These are things we know we know. We also know there are known unknowns. That is to say, we know there are some things we do not know. But there are also unknown unknowns, the ones we don't know we don't know.”</i>
+    <i>"There are known knowns. These are things we know we know. We also know there 
+	are known unknowns. That is to say, we know there are some things we do not know. 
+	But there are also unknown unknowns, the ones we don't know we don't know."</i>
 </blockquote><p>
 In the context of SST uncertainty, unknown unknowns are those things that have been overlooked. By their nature, unknown unknowns are unquantifiable; they represent the deeper uncertainties that beset all scientific endeavors. By deep, I do not mean to imply that they are necessarily large. In this review I hope to show that the scope for revolutions in our understanding is limited. Nevertheless, refinement through the continual evolution of our understanding can only come if we accept that our understanding is incomplete. Unknown unknowns will only come to light with continued, diligent and sometimes imaginative investigation of the data and metadata.
 </p>
 <p><a href="1.html">Previous - Introduction</a> <a href="index.html">Index</a> <a href="3.html">Next - The current state of uncertainty in in situ SST analyses</a></p>
 <br><br><br><br>
+</div>
+</div>
 </body>
 </html>
