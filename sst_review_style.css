@@ -1,0 +1,57 @@
+h1, h2 {
+  color: CornflowerBlue;
+}
+p, h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: DarkGoldenRod;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+}
+
+/* Left and right column */
+.column.side {
+    width: 5%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 75%;
+	max-width: 800px;
+}
+
+.caption {
+	width: 75%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: CornflowerBlue;
+    color: white;
+}
