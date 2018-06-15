@@ -1,11 +1,11 @@
 h1, h2 {
   color: CornflowerBlue;
 }
-p, h1, h2 {
+p, h1, h2, th, td, li {
     font-family: Arial, Helvetica, sans-serif;
 } 
 
-p {
+p, th, td, li {
 	line-height: 1.5;
 }
 
