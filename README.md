@@ -11,6 +11,8 @@ while maintaining a history of the changes that have been made to it. It would b
 particularly wonderful if others got involved in updating and otherwise improving 
 the review.
 
+The review is rendered as a regular web page via [GitHub pages](https://et-ncmp.github.io/index.html)
+
 The text is based on Kennedy, J. J. (2014), A review of uncertainty in in situ measurements 
 and data sets of sea surface temperature, Rev. Geophys., 52, 132 
 (http://onlinelibrary.wiley.com/doi/10.1002/2013RG000434/abstract)
