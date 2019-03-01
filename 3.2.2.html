@@ -41,9 +41,11 @@ Berry and Kent [2008] showing the good correlation between the estimates.</i>
 </p>
 
 <p>
-In the studies listed in Table 4, the systematic component of the error was assumed to be 
+In most of the studies listed in Table 4, the systematic component of the error was assumed to be 
 different for each ship, but this does not on its own capture the effects of pervasive 
-systematic errors. The data from Kent and Berry [2008], Brasnett [2008] and Xu and Ignatov 
+systematic errors. Chan and Huybers [2019] showed that there are systematic errors at the level of 
+nations and decks in ICOADS. They argue for the inclusion of a systematic component that 
+operates at this level. The data from Kent and Berry [2008], Brasnett [2008] and Xu and Ignatov 
 [2010] also show that the systematic observational error component for some ships varies 
 from month to month suggesting that the partitioning of systematic and uncorrelated effects 
 is also a function of the time period considered.
@@ -52,6 +54,8 @@ is also a function of the time period considered.
 <center>
 <table>
 <tr><th><b>Reference</b></th><th><b>Platform type</b></th><th><b>Uncorrelated</b></th><th><b>Systematic</b></th><th><b>Notes</b></th></tr>
+<tr><td>Chan and Huybers [2019] Table 3</td>Ship</td><td>0.55±0.15K<sup>2</sup></td><td>0.78±0.12K<sup>2</sup></td><td>National level</td><tr>
+<tr><td>Chan and Huybers [2019] Table 3</td>Ship</td><td>0.42±0.15K<sup>2</sup></td><td>0.80±0.12K<sup>2</sup></td><td>Deck level</td><tr>
 <tr><td>Kent and Berry [2008] pg 11 Table 5a</td><td>Ship</td><td>0.7 K</td><td>0.8 K</td><td>From comparison with Numerical Weather Prediction fields provided with VOSClim data</td></tr>
 <tr><td>Pg 12 Table 5c</td><td>	Drifter</td><td>0.6 K</td><td>0.3 K</td><td></td></tr>
 <tr><td>Pg 11 Table 5b</td><td>	Mooring	</td><td>0.3 K</td><td>0.2 K</td><td></td></tr>
@@ -68,11 +72,16 @@ is also a function of the time period considered.
 <p>
 The addition of a systematic component has a pronounced effect on the uncertainty of 
 large-scale averages comprising many observations. Kennedy et al. [2011b] estimated 
-that the effect of the correlations between errors was to increase the uncertainty of 
+that the effect of the correlations between errors in individual ship measurements was 
+to increase the uncertainty of 
 the global annual average SST anomaly due to measurement error from 0.01 K (uncorrelated 
 case) to more than 0.05 K in the 19th Century and to more than 0.01 K even in the 
 well-observed modern period when millions of observations contribute to the annual 
-global average (see Figure 8).
+global average (see Figure 8). The Deck-level and nation-level systematic errors 
+identified by Chan and Huybers [2019] would likely lead to an increase in the uncertainty 
+of large scale averages in unadjusted data. However, it is not clear to what extent existing bias 
+adjustment methods deal with the global and regional biases arising from systematic errors 
+at this level.
 </p><p>
 Berry and Kent [2017] used an error model that combined both uncorrelated and systematic 
 effects to assess the adequacy of the marine observing network. They found that metrics 
@@ -89,7 +98,9 @@ estimation of EOFs. However, because of the assumed independence of the errors b
 ships, the correlated component of the uncertainty remains relatively unimportant for 
 the analysis of long-term trends of large-scale averages. Pervasive systematic errors, 
 which are correlated across a large proportion of the global fleet, (section 3.2) are far 
-more important from that point of view.
+more important from that point of view. Systematic errors at deck-level or nation-level 
+(Chan and Huybers, 2019) could also affect regional and global trends as these are likely 
+to have large scale effects over multiple years.
 </p><p>
 One of the difficulties with estimating the uncertainties associated with systematic errors 
 from individual ships is that not all observations in ICOADS can be associated with an 
@@ -115,7 +126,10 @@ that the observational errors are normally distributed, but this is not necessar
 for individual observations. Kennedy et al. [2011a] investigated the properties of observations 
 that had been quality controlled using the procedures described in Rayner et al. [2006]. They 
 found that in comparisons with satellite observations the distributions of errors were 'fat-tailed' 
-with the distribution of errors having a positive kurtosis. In the creation of gridded data sets 
+with the distribution of errors having a positive kurtosis. Chan and Huybers [2019] note that the 
+kurtosis is reduced when spatial heterogeneity of matched observations is taken into account.
+</p><p>
+In the creation of gridded data sets 
 from SST observations, the effects of outliers can be minimized somewhat by the use of resistant 
 or robust statistics such as Winsorised, or trimmed means (see e.g., Rayner et al. [2006]). 
 The effect of outliers is further reduced in large scale averages and the distribution of 
