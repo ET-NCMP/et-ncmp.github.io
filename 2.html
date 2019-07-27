@@ -27,23 +27,99 @@ This is not necessarily the same usage as is found in the cited papers. It is co
 to see the word error used as a synonym for uncertainty such as in the commonly used 
 phrases <i>standard error</i> and <i>analysis error</i>.
 </p><p>
-Broadly speaking, errors in individual SST observations have been split into two groupings: <b>uncorrelated observational errors</b> (often referred to as random or independent errors) and <b>systematic observational errors</b>. Although this is a convenient way to deal with the uncertainties, errors in SST measurements will generally share a little of the characteristics of each. More recent literature, particularly associated with satellite retrievals, also deals with <b>locally-correlated errors</b> also known as synoptically-correlated errors.
+Broadly speaking, errors in individual SST observations have been split into two groupings: 
+	  <b>uncorrelated observational errors</b> (often referred to as random or independent 
+	  errors) and <b>systematic observational errors</b>. Although this is a convenient 
+	  way to deal with the uncertainties, errors in SST measurements will generally share
+	  a little of the characteristics of each. More recent literature, particularly 
+	  associated with satellite retrievals, also deals with <b>locally-correlated errors</b> 
+	  also known as synoptically-correlated errors.
 </p><p>
-<b>Uncorrelated observational errors</b> occur for many reasons: misreading of the thermometer, rounding errors, the difficulty of reading the thermometer to a precision higher than the smallest marked gradation, incorrectly recorded values, errors in transcription from written to digital sources and sensor noise among others. Although they might confound a single measurement, the independence of the individual errors means they tend to cancel out when large numbers are averaged together. Therefore, the contribution of uncorrelated/independent errors to the uncertainty on the global average SST is much smaller than the contribution of uncorrelated error to the uncertainty on a single observation even in the most sparsely observed years. Nonetheless, where observations are few, uncorrelated observational errors can be an important component of the total uncertainty.
+<b>Uncorrelated observational errors</b> occur for many reasons: misreading of the thermometer, 
+	  rounding errors, the difficulty of reading the thermometer to a precision higher than 
+	  the smallest marked gradation, incorrectly recorded values, errors in transcription 
+	  from written to digital sources and sensor noise among others. Although they might 
+	  confound a single measurement, the independence of the individual errors means they 
+	  tend to cancel out when large numbers are averaged together. Therefore, the contribution 
+	  of uncorrelated/independent errors to the uncertainty on the global average SST is much 
+	  smaller than the contribution of uncorrelated error to the uncertainty on a single 
+	  observation even in the most sparsely observed years. Nonetheless, where observations 
+	  are few, uncorrelated observational errors can be an important component of the total 
+	  uncertainty.
 </p><p>
-<b>Systematic observational errors</b> are much more problematic because their effects become relatively more pronounced as greater numbers of observations are aggregated. Systematic errors might occur because a particular thermometer is mis-calibrated, or poorly sited. No amount of averaging of observations from a thermometer that is mis-calibrated such that it reads 1 K too high will reduce the error in the aggregate below this level save by chance. However, in many cases the systematic error will depend on the particular environment of the thermometer and will therefore be independent from ship to ship. In this case, averaging together observations from many different ships or buoys will tend to reduce the contribution of systematic observational errors to the uncertainty of the average.
+<b>Systematic observational errors</b> are much more problematic because their effects become 
+	  relatively more pronounced as greater numbers of observations are aggregated. Systematic 
+	  errors might occur because a particular thermometer is mis-calibrated, or poorly sited. 
+	  No amount of averaging of observations from a thermometer that is mis-calibrated such that 
+	  it reads 1 K too high will reduce the error in the aggregate below this level save by chance. 
+	  However, in many cases the systematic error will depend on the particular environment 
+	  of the thermometer and will therefore be independent from ship to ship. In this case, 
+	  averaging together observations from many different ships or buoys will tend to reduce 
+	  the contribution of systematic observational errors to the uncertainty of the average.
 </p><p>
-In the 19th and early 20th century, the majority of observations were made using buckets to haul a sample of water up to the deck for measurement. Although buckets were not always of a standard shape or size, they had a general tendency under typical environmental conditions to lose heat via evaporation or directly to the air when the air-sea temperature difference was large. Folland and Parker [1995] provide a more comprehensive survey of the problem which was already well known in the early 20th Century (see, for example, the introduction to Brooks [1926]). <b>Pervasive systematic observational errors</b> like the cold bucket bias are particularly pertinent for climate studies because the errors affect the whole observational system and change over time as observing technologies and practices change. The change can be gradual as old methods are slowly phased out, but they can also be abrupt, reflecting significant geopolitical events such as the Second World War [Thompson et al., 2008]. Rapid changes also arise because the digital archives of marine meteorological reports (ICOADS Woodruff et al. [2011]) are themselves discontinuous.
+In the 19th and early 20th century, the majority of observations were made using buckets to haul a 
+	  sample of water up to the deck for measurement. Although buckets were not always of a 
+	  standard shape or size, they had a general tendency under typical environmental conditions 
+	  to lose heat via evaporation or directly to the air when the air-sea temperature difference 
+	  was large. Folland and Parker [1995] provide a more comprehensive survey of the problem 
+	  which was already well known in the early 20th Century (see, for example, the introduction 
+	  to Brooks [1926]). <b>Pervasive systematic observational errors</b> like the cold bucket 
+	  bias are particularly pertinent for climate studies because the errors affect the whole 
+	  observational system and change over time as observing technologies and practices change.
+	  The change can be gradual as old methods are slowly phased out, but they can also be abrupt, 
+	  reflecting significant geopolitical events such as the Second World War [Thompson et al., 2008]. 
+	  Rapid changes also arise because the digital archives of marine meteorological reports (ICOADS 
+	  Woodruff et al. [2011]) are themselves discontinuous.
 </p><p>
-Generally, systematic errors are dealt with by making adjustments based on knowledge of the systematic effects. The adjustments are uncertain because the variables that determine the size of the systematic error are imperfectly known. The atmospheric conditions at the point where the measurement was made, the method used to make the measurement  ERI or bucket  the material used in the construction of the bucket if one was used, as well as the general diligence of the sailors making the observations have not in many cases been reliably recorded. Part of the uncertainty can be estimated by allowing uncertain parameters and inputs to the adjustment algorithms to be varied within their plausible ranges thus generating a range of adjustments (e.g., Kennedy et al. [2011c]). This parametric uncertainty gives an idea of the uncertainties associated with poorly determined parameters within a particular approach, but it does not address the more general uncertainty arising from the underlying assumptions. This uncertainty will be dealt with later as structural uncertainty.
+Generally, systematic errors are dealt with by making adjustments based on knowledge of the systematic 
+	  effects. The adjustments are uncertain because the variables that determine the size of the 
+	  systematic error are imperfectly known. The atmospheric conditions at the point where the measurement 
+	  was made, the method used to make the measurement  ERI or bucket  the material used in the 
+	  construction of the bucket if one was used, as well as the general diligence of the sailors making 
+	  the observations have not in many cases been reliably recorded. Part of the uncertainty can be 
+	  estimated by allowing uncertain parameters and inputs to the adjustment algorithms to be varied 
+	  within their plausible ranges thus generating a range of adjustments (e.g., Kennedy et al. [2011c]). 
+	  This parametric uncertainty gives an idea of the uncertainties associated with poorly determined 
+	  parameters within a particular approach, but it does not address the more general uncertainty arising 
+	  from the underlying assumptions. This uncertainty will be dealt with later as structural uncertainty.
 </p><p>
-Between uncorrelated and systematic errors sit <b>locally-correlated errors</b>. These are typically associated with unknown, or poorly known, temporary atmospheric conditions which have a common effect on measurements in a limited region. This is most commonly encountered in discussions of satellite SST retrieval errors, but would also apply to measurements made with buckets which are sensitive to changing atmospheric conditions.
+Between uncorrelated and systematic errors sit <b>locally-correlated errors</b>. These are typically associated 
+	  with unknown, or poorly known, temporary atmospheric conditions which have a common effect on 
+	  measurements in a limited region. This is most commonly encountered in discussions of satellite SST 
+	  retrieval errors, but would also apply to measurements made with buckets which are sensitive to changing 
+	  atmospheric conditions. Between pervasive systematic errors and systematic errors, one finds a range 
+	  of different potential correlations. For example, the buckets and instructions issued by a ship's 
+	  recruiting country, were different for each country. It is important to identify these kinds of 
+	  correlations between errors because even small correlations between errors mean that they cancel less 
+	  rapidly as readings are aggregated and can therefore be an important component of the uncertainty in 
+	  large-scale averages.
 </p><p>
-There are a number of other uncertainties associated with the creation of the gridded data sets and SST analyses that are commonly used as a convenient alternative to dealing with individual marine observations. The uncertainties are closely related because they arise in the estimation of area-averages from a finite number of noisy and often sparsely-distributed observations.
+There are a number of other uncertainties associated with the creation of the gridded data sets and SST analyses
+	  that are commonly used as a convenient alternative to dealing with individual marine observations. 
+	  The uncertainties are closely related because they arise in the estimation of area-averages from a 
+	  finite number of noisy and often sparsely-distributed observations.
 </p><p>
-In Kennedy et al., [2011b] two forms of this uncertainty were considered: <b>grid-box sampling uncertainty</b> and <b>large-scale sampling uncertainty</b> (which they referred to as coverage uncertainty). Grid-box sampling uncertainty refers to the uncertainty accruing from the estimation of an area-average SST anomaly within a grid box from a finite, and often small, number of observations. Large-scale sampling uncertainty refers to the uncertainty arising from estimating an area-average for a larger area that encompasses many grid boxes that do not contain observations. Although these two uncertainties are closely related, it is often easier to estimate the grid-box sampling uncertainty, where one is dealing with variability within a grid box, than the large-scale sampling uncertainty, where one must take into consideration the rich spectrum of variability at a global scale.
+In Kennedy et al., [2011b] two forms of this uncertainty were considered: <b>grid-box sampling uncertainty</b> 
+	  and <b>large-scale sampling uncertainty</b> (which they referred to as coverage uncertainty). Grid-box 
+	  sampling uncertainty refers to the uncertainty accruing from the estimation of an area-average SST 
+	  anomaly within a grid box from a finite, and often small, number of observations. Large-scale sampling
+	  uncertainty refers to the uncertainty arising from estimating an area-average for a larger area that 
+	  encompasses many grid boxes that do not contain observations. Although these two uncertainties are 
+	  closely related, it is often easier to estimate the grid-box sampling uncertainty, where one is dealing 
+	  with variability within a grid box, than the large-scale sampling uncertainty, where one must take into 
+	  consideration the rich spectrum of variability at a global scale.
 </p><p>
-Although some gridded SST data sets contain many grid boxes which are not assigned an SST value because they contain no measurements, other SST data sets  oftentimes referred to as SST analyses  use a variety of techniques to fill the gaps. They use information gleaned from data-rich periods to estimate the parameters of statistical models that are then used to estimate SSTs in the data voids, often by interpolation or pattern fitting. There are many ways to tackle this problem and all are necessarily approximations to the truth. The correctness of the analysis uncertainty estimates derived from these statistical methods are conditional upon the correctness of the methods, inputs and assumptions used to derive them. No method is correct therefore analytic uncertainties based on a particular method will not give a definitive estimate of the true uncertainty. To gain an appreciation of the full uncertainty it is necessary to factor in the lack of knowledge about the correct methods to use, which brings the discussion back to structural uncertainty.
+Although some gridded SST data sets contain many grid boxes which are not assigned an SST value because they 
+	  contain no measurements, other SST data sets  oftentimes referred to as SST analyses  use a variety 
+	  of techniques to fill the gaps. They use information gleaned from data-rich periods to estimate the 
+	  parameters of statistical models that are then used to estimate SSTs in the data voids, often by 
+	  interpolation or pattern fitting. There are many ways to tackle this problem and all are necessarily 
+	  approximations to the truth. The correctness of the analysis uncertainty estimates derived from these 
+	  statistical methods are conditional upon the correctness of the methods, inputs and assumptions used 
+	  to derive them. No method is correct therefore analytic uncertainties based on a particular method will 
+	  not give a definitive estimate of the true uncertainty. To gain an appreciation of the full uncertainty 
+	  it is necessary to factor in the lack of knowledge about the correct methods to use, which brings the 
+	  discussion back to structural uncertainty.
 </p><p>
 There are many scientifically defensible ways to produce a data set. For example, one 
 might choose to fill gaps in the data by projecting a set of Empirical Orthogonal 
