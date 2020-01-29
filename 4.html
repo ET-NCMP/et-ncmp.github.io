@@ -13,17 +13,140 @@
 <p><a href="3.7.html">Previous - 3.7 Estimates of Total Uncertainty</a> <a href="index.html">Index</a> <a href="5.html">Next - 5 Minimizing Exposure to Uncertainty</a></p>
 <h1>4 Presentation of Uncertainty</h1>
 <p>
-At present, some groups provide explicit uncertainty estimates based on their analysis techniques [Kaplan et al., 1998; Smith et al., 2008; Kennedy et al., 2011b, 2011c, Ishii et al., 2005; Hirahara et al., 2013, Liu et al. 2015, Huang et al. 2016]. The uncertainty estimates derived from a particular analysis will tend to misestimate the true uncertainty because they rely on the analysis method and the assumptions on which it is based being correct.
+At present, some groups provide explicit uncertainty estimates based on their analysis techniques 
+  [Kaplan et al., 1998; Smith et al., 2008; Kennedy et al., 2011b, 2011c, Kennedy et al. 2019, Ishii et al., 2005; 
+  Hirahara et al., 2013, Liu et al. 2015, Huang et al. 2016, 2017]. The uncertainty estimates derived 
+  from a particular analysis will tend to misestimate the true uncertainty because they rely on 
+  the analysis method and the assumptions on which it is based being complete and correct.
 </p><p>
-Comparing uncertainty estimates provided with analyses can be difficult (Kent et al. 2017) because not all analyses consider the same sources of uncertainties. Consequently, a narrower uncertainty range does not necessarily imply a better analysis. One way that data set providers could help users is to provide an inventory of sources of uncertainty that have been considered either explicitly or implicitly. This would allow users to assess the relative maturity of the uncertainty analysis.
+Comparing uncertainty estimates provided with analyses can be difficult (Kent et al. 2017) because 
+    not all analyses consider the same sources of uncertainties. Consequently, a narrower uncertainty 
+    range does not necessarily imply a better analysis. One way that data set providers could help 
+    users is to provide an inventory of sources of uncertainty that have been considered either 
+    explicitly or implicitly. This would allow users to assess the relative maturity of the 
+    uncertainty analysis and assess when uncertainty estimates are comparable. There is a difficulty 
+    with this approach however, which is that the methods used to process the data may not be 
+    exactly comparable. For example, grid-box sampling uncertainty, which affects a simple gridded 
+    data set such as Kennedy et al. [2019] would not have an exact counterpart in an analysis which 
+    directly interpolates individual observations (e.g. the land component of Rohde et al. 2013). 
+    Both analyses may well address uncertainty that arises due to sparse data coverage, but one could 
+    not easily extract the necessary components of a like-for-like comparison.
 </p><p>
-There is a further difficulty in supplying and using uncertainty estimates: the traditional means of displaying uncertainties  the error bar, or error range  does not preserve the covariance structure of the uncertainties. Unfortunately, storing covariance information for all but the lowest resolution data sets can be prohibitively expensive. EOF-based analyses, like that of Kaplan et al. [1998], could in principle efficiently store the spatial-error covariances because only the covariances of the reduced space of principal components need to be kept. For Kaplan et al. [1998], based on a reduced space of only 80 EOFs, this is a matrix of order 802 elements for each time step as opposed to 10002 elements for the full-field covariance matrix. The difficulty with this approach is that not all variability can be resolved by the leading EOFs and excluding higher-order EOFs will underestimate the full uncertainty.
+There is a further difficulty in supplying and using uncertainty estimates: the traditional means 
+    of displaying uncertainties, the error bar, or error range,  does not, on its own, describe or 
+    preserve the covariance structure of the errors. A user wishing to propagate uncertainty 
+    information into and through their own analysis cannot do so correctly without this information. 
+    It is possible to describe it (provided it is not overly complex) using covariance 
+    matrices, which encapsulate not only uncertainties expressed as variances of the expected error 
+    distributions but also the correlations between them.
 </p><p>
-Karspeck et al. [2012] drew samples from the posterior probability produced by their analysis. Each sample provides an SST field that is consistent with the available observations and the estimated covariance structure. Sampling has the added advantage that it can be combined easily with Monte-Carlo samples from the measurement bias distributions. However, production of samples is not always computationally efficient. Karspeck et al. [2012] were able to do it for the North Atlantic region, but the computational costs of extending the analysis unchanged to the rest of the world could be prohibitive. Kennedy et al. [2011c] provided an ensemble of 100 interchangeable realizations of their bias-adjusted data set, HadSST3. The ensemble spans parametric uncertainties in their adjustment method. Liu et al. [2015] and Huang et al. [2016] generated ensembles of the ERSSTv4 data set, with up to 1000 ensemble members.
+Unfortunately, the storage requirements for covariance information for all but the 
+    lowest resolution data sets can be prohibitively expensive. EOF-based analyses, like that of
+    Kaplan et al. [1998], could in principle efficiently store the spatial-error covariances because 
+    only the covariances of the reduced space of principal components need to be kept. For Kaplan et 
+    al. [1998], based on a reduced space of only 80 EOFs, this is a matrix of order 802 elements for 
+    each time step as opposed to 10002 elements for the full-field covariance matrix. The difficulty 
+    with this approach is that not all variability can be resolved by the leading EOFs and excluding 
+    higher-order EOFs will underestimate the full uncertainty. Furthermore, this tells us nothing 
+    about the temporal correlation of the errors. Full space-time error covariance matrices can be 
+    very big indeed.
 </p><p>
-By providing a set of plausible realizations of a data set, or alternatively by providing plausible realizations of typical measurement errors [Mears et al., 2011], it can be relatively easy for users to assess the sensitivity of their analysis to uncertainties in SST data. For example, individual ensemble members of HadSST3 were used in Tokinaga et al. [2012], along with other SST analyses, to show that their results were robust to the estimated bias uncertainties in SSTs. Kent et al. [2017] were able to compare HadSST3 and ERSSTv4 and detect significant differences between them.
+Another approach to presenting uncertainty information is to use "ensembles". These can take a 
+    number of forms. As a very simple example, one can perturb the best estimate value in a data set by 
+    generating samples of "noise" based on the estimated uncertainties and an assumed probability 
+    distribution such as a Gaussian. Repeating this process provides an ensemble, each member of which 
+    can be propagated through an analysis. The ensemble of results then give an estimate of the 
+    uncertainty in the outcome given the uncertainty in the input. The general idea has been realised 
+    in a number of different ways.
 </p><p>
-Another approach [Merchant et al. 2013] is to separate out components of the uncertainty that correlate at different scales. Some measurement errors, such as sensor noise, are uncorrelated. Some uncertainties, for example those related to water vapor in a satellite view, are locally-correlated at a synoptic scale. Yet others are correlated at all times and places. Grouping uncertainties in this way allows users to propagate uncertainty information more easily. However, care needs to be taken to ensure that the correlation scales are realistic e.g. Bellprat et al. [2017].
+    The simple example mentioned just above was applied in a more complex case in Jones and Kennedy [2017]. 
+    In that paper they drew samples from spatial covariance matrices and combined these using assumptions 
+    about the temporal correlation of the errors. As a general approach, and even in simple situations, 
+    it can often be simpler than performing a complete "propagation of uncertainty" calculation. It has 
+    the added advantage that it works even in situations where the propagation of uncertainty formulae 
+    breakdown, such as situations where the processing is non-linear or discontinuous, where the errors 
+    are large and the linearity assumtion no longer holds, or where the error distributions themselves 
+    have strange shapes (non-Gaussian, multi modal or whatever) that it would be desirable to preserve 
+    through the uncertainty propagation process.
+</p><p>
+    A problem with this approach is that typically a measurement can be thought of the true (albeit 
+    unknowable) value plus an error (again, unknowable). By adding a sample from the estimated 
+    uncertainty distribution, one ends up with the truth plus the actual error plus an artificial 
+    error. While in some situations this can help to understand how uncertainties propagate, it would 
+    be inappropriate to apply it naively in a study of extreme values.
+</p><p>
+    A second kind of ensemble, often referred to as a parametric ensemble, is created by varying 
+    parameters in an analysis to generate a set of outcomes. This method was used to assess uncertainty 
+    in SST bias estimates by Kennedy et al. [2011c], Kennedy et al. [2019] and in a broader range of 
+    analytic choices by Liu et al. [2015] and Huang et al. [2016a]. 
+    This approach allows for the expression of complex error structures and allows users to easily propagate 
+    uncertainty through an analysis. The interpretation of this kind of ensemble can be difficult however as 
+    it is not always possible to vary all the relevant parameters, leading to an incomplete assessment 
+    of uncertainty. Nor can the resulting ensemble be treated as a probability density function (or 
+    approximation thereof). A further limitation of the approach is that the assessed parametric uncertainty is 
+    often smaller than the structural uncertainty. It is worth noting that Kennedy et al. [2019] and 
+    Huang et al. [2016a] generate their ensembles in slightly different ways. Kennedy et al. [2019] 
+    choose continuous parameters randomly for each ensemble members from anywhere within the distribution. 
+    Huang et al. [2016a] choose discrete values even for parameters that can take continuous values. This 
+    means that each parameter can be more evenly sampled, at the expense of not exploring the full range of 
+    possibilities.
+</p><p>
+    A third kind of ensemble, which fixes some of the problems with the first simple kind of ensemble described 
+    above, is where samples are drawn from the posterior distribution of a statistical analysis. For example, 
+    Karspeck et al. [2012] drew samples from the posterior distribution of a statistical analysis of North 
+    Atlantic SSTs. Each 
+    sample provides an SST field that is consistent with the available observations and the estimated 
+    covariance structures of the actual SST field and the observational errors. The resulting samples 
+    have the advantage that each one "looks" like an SST field. Often the best estimate for a statistical 
+    analysis (such as Kriging) will be smooth in areas with few or no observations, but have more 
+    realistic spatial variability in areas where there are many observations. This is unrealistic and 
+    undesirable for many applications such as forcing an atmosphere-only run of a climate model. Samples 
+    solve this problem, at least to the extent that statistical 
+    model describes those structures. Sampling has the added 
+    advantage that it can be combined easily with samples from a parametric ensemble that represents errors 
+    that are hard to treat analytically, such as residual errors associated with pervasive systematic errors. 
+    However, production of samples is 
+    not always computationally efficient. Karspeck et al. [2012] were able to do it for the North 
+    Atlantic region, but the computational costs of extending the analysis unchanged to the rest of 
+    the world could be prohibitive.
+</p><p>
+    Once the decision has been made to present uncertainties as an ensemble, there are a number of ways 
+    that the ensembles can themselves be presented. Mears et al. [2011] provide a best estimate 
+    data set (of Microwave Sounding Unit-derived tropospheric temperatures) with an ensemble of perturbations 
+    to that best estimate. The best estimate is different from 
+    each of the ensemble members. Kennedy et al. [2011c] and Kennedy 
+    et al. [2019] provide an ensemble where each ensemble member is equivalent and there is no single 
+    best estimate. Liu et al. [2015] and Huang et al. [2016a] present an "operational" ensemble member used 
+    as a best estimate, which has parameter choices that are judged to be optimal. The operational member 
+    is one of a larger ensemble. In a sense these three approaches are equivalent - the same information can 
+    be obtained from all three with a small amount of processing - however, they represent perhaps subtly 
+    different ideas about what an ensemble represents and suggest different ways it might be used.
+</p><p>
+By providing a set of plausible realizations of a data set, it can be relatively easy for 
+    users to assess the sensitivity of their analysis to uncertainties in SST data. 
+    Kent et al. [2017] were able to compare HadSST3 and ERSSTv4 and detect significant differences 
+    between them. By combining ensembles, parametric or otherwise, with estimates from multiple data 
+    sets it is possible to get an idea of the overall uncertainty combining those parts of uncertainty 
+    which can be more easily quantified with structural uncertainty, which is harder to assess 
+    efficiently. For example, 
+    individual ensemble members of HadSST3 were used in Tokinaga et al. [2012], along with other SST 
+    analyses, to show that their results were robust to the estimated bias uncertainties in SSTs. 
+</p><p>
+While ensembles are a practical approach in some respects, they can be impractical for large data sets, such 
+    as those with high spatial or temporal resolution. Current satellite SST data sets have spatial resolutions 
+    measured in kilometres and temporal resolutions of minutes, resolving small scale features and variations 
+    in diurnal cycles. In such cases, generating, storing and retrieving large numbers of ensemble members 
+    can be prohibitively expensive. Another approach [Merchant et al. 2013] is to separate out components 
+    of the uncertainty that correlate 
+    at different scales. Some measurement errors, such as sensor noise, are uncorrelated. Some 
+    uncertainties, for example those related to water vapor in a satellite view, are locally-correlated 
+    at a synoptic scale. Yet others are correlated at all times and places. Grouping uncertainties in 
+    this way, together with information about the how correlations behave can allow users to propagate 
+    uncertainty information more easily. This could be done by estimating effective degrees of freedom 
+    within an area average (as recommended in the Product User Guide for the SST CCI project), by generating 
+    error covariances over small regions relevant to a particular calculation and either sampling from 
+    the distribution or propagating the uncertainties analytically. However, care needs to be taken to 
+    ensure that the correlation scales and their associated shape parameters are realistic e.g. Bellprat et al. [2017].
 </p>
 <p><a href="3.7.html">Previous - 3.7 Estimates of Total Uncertainty</a> <a href="index.html">Index</a> <a href="5.html">Next - 5 Minimizing Exposure to Uncertainty</a></p>
 <br><br><br><br>
