@@ -57,7 +57,8 @@ Another approach to presenting uncertainty information is to use "ensembles". Th
     distribution such as a Gaussian. Repeating this process provides an ensemble, each member of which 
     can be propagated through an analysis. The ensemble of results then give an estimate of the 
     uncertainty in the outcome given the uncertainty in the input. The general idea has been realised 
-    in a number of different ways.
+    in a number of different ways. This method is often referred to as the Monte-carlo method 
+    and is widely used.
 </p><p>
     The simple example mentioned just above was applied in a more complex case in Jones and Kennedy [2017]. 
     In that paper they drew samples from spatial covariance matrices and combined these using assumptions 
@@ -77,15 +78,20 @@ Another approach to presenting uncertainty information is to use "ensembles". Th
     of the ensemble members are very different from those of the true SSTs.
 </p><p>
     A second kind of ensemble, often referred to as a parametric ensemble, is created by varying 
-    parameters in an analysis to generate a set of outcomes. This method was used to assess uncertainty 
+    parameters or analytical choices in an analysis to generate a set of outcomes. Ideally, one would vary 
+    parameters through a plausible range or select from a range of equally defensible choices (e.g. the 
+    choice of 90 or 95% for a significance threshold). Parametric ensembles were used to assess uncertainty 
     in SST bias estimates by Kennedy et al. [2011c], Kennedy et al. [2019] and in a broader range of 
     analytic choices by Liu et al. [2015] and Huang et al. [2016a]. 
     This approach allows for the expression of complex error structures and allows users to easily propagate 
     uncertainty through an analysis. The interpretation of this kind of ensemble can be difficult however as 
     it is not always possible to vary all the relevant parameters, leading to an incomplete assessment 
     of uncertainty. Nor can the resulting ensemble be treated as a probability density function (or 
-    approximation thereof). A further limitation of the approach is that the assessed parametric uncertainty is 
-    often smaller than the structural uncertainty. It is worth noting that Kennedy et al. [2019] and 
+    approximation thereof). By appropriate parameter choice it may be possible to generate a pdf, however, 
+    some parametric choices are effectively structural (e.g. where distinct modules can perform a given 
+    task in very different ways) and may not fit neatly into such a scheme. A further limitation of the 
+    approach is that the assessed parametric uncertainties are often smaller than the structural uncertainty. 
+    It is worth noting that Kennedy et al. [2019] and 
     Huang et al. [2016a] generate their ensembles in slightly different ways. Kennedy et al. [2019] 
     choose continuous parameters randomly for each ensemble members from anywhere within the distribution. 
     Huang et al. [2016a] choose discrete values even for parameters that can take continuous values. This 
