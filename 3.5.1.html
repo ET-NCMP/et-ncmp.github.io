@@ -13,15 +13,63 @@
 <p><a href="3.5.html">Previous - 3.5 Reconstruction Techniques and Other Structural Choices</a> <a href="index.html">Index</a> <a href="3.5.2.html">Next - 3.5.2 Other Structural Choices</a></p>
 <h1>3.5.1 Critique of Reconstruction Techniques</h1>
 <p>
-The current generation of SST analyses are the survivors of an evolutionary process during which less effective techniques were discarded in favor of better adapted alternatives. It is worthwhile to ask how, as a group, they address the range of criticisms that have arisen during that time. 
+The current generation of SST analyses are the survivors of an evolutionary process during which less 
+  effective techniques were discarded in favor of better adapted alternatives. It is worthwhile to ask 
+  how, as a group, they address the range of criticisms that have arisen during that time. 
 </p><p>
-One concern is that patterns of variability in the modern era which are used to estimate the parameters of the statistical models might not faithfully represent variability at earlier times [Hurrell and Trenberth, 1999]. The concern is allayed somewhat by the range of approaches taken. The method of Kaplan et al. [1998] which uses the modern period to define Empirical Orthogonal Functions (EOFs, see Hannachi et al., [2007] for a review of the use of EOFs in the atmospheric sciences) tends to underestimate the long-term trend. This is particularly obvious in the nineteenth and early twentieth century. Rayner et al. [2003] extended the method by defining a low-frequency, large-scale EOF that better captured the long-term trend in the data. However, it is possible that a single EOF will fail to capture all the low-frequency changes. Smith et al. [2008] allow for a non-stationary low-frequency component in their analysis which contributes a large component of uncertainty in the early record, but their reconstruction reproduces less high-frequency variability at data-sparse epochs. Huang et al. [2015, 2016, 2017] and Liu et al. [2015] vary some of the parameters in Smith et al. [2008]  associated with data reconstruction allowing them to quantify uncertainties associated with some of the choices made. Ilin and Kaplan [2009] and Luttinen and Ilin [2009, 2012] used algorithms that make use of data throughout the record to estimate the covariance structures and other parameters of their statistical models. The three algorithms use either large-scale patterns (VBPCA, GPFA) or local correlations (GP). Differences between the three methods are generally small at the global level, but they diverge during the 1860s when data are few. There is a caveat that despite using all available observations, such methods will still tend to give a greater weight to periods with more plentiful observations and still assume that the patterns are invariant. Ishii et al. [2005] use a simply-parameterized local covariance function for interpolation. Their optimal interpolation (OI) method was assessed by Hirahara et al. [2013] to have larger analysis uncertainties and larger cross-validation errors than the EOF-based COBE-2 analysis. However, the use of a simple optimal interpolation method has the advantage that it makes fewer assumptions regarding the stationarity of large-scale variability.
+One concern is that patterns of variability in the modern era which are used to estimate the parameters 
+    of the statistical models might not faithfully represent variability at earlier times [Hurrell and 
+    Trenberth, 1999]. The concern is allayed somewhat by the range of approaches taken. The method of 
+    Kaplan et al. [1998] which uses the modern period to define Empirical Orthogonal Functions (EOFs, 
+    see Hannachi et al., [2007] for a review of the use of EOFs in the atmospheric sciences) tends to 
+    underestimate the long-term trend. This is particularly obvious in the nineteenth and early twentieth 
+    century. Rayner et al. [2003] extended the method by defining a low-frequency, large-scale EOF that 
+    better captured the long-term trend in the data. However, it is possible that a single EOF will fail 
+    to capture all the low-frequency changes. Smith et al. [2008] allow for a non-stationary low-frequency 
+    component in their analysis which contributes a large component of uncertainty in the early record, 
+    but their reconstruction reproduces less high-frequency variability at data-sparse epochs. Huang et 
+    al. [2015, 2016, 2017] and Liu et al. [2015] vary some of the parameters in Smith et al. [2008]  
+    associated with data reconstruction allowing them to quantify uncertainties associated with some of 
+    the choices made. Ilin and Kaplan [2009] and Luttinen and Ilin [2009, 2012] used algorithms that make 
+    use of data throughout the record to estimate the covariance structures and other parameters of their 
+    statistical models. The three algorithms use either large-scale patterns (VBPCA, GPFA) or local 
+    correlations (GP). Differences between the three methods are generally small at the global level, but 
+    they diverge during the 1860s when data are few. There is a caveat that despite using all available 
+    observations, such methods will still tend to give a greater weight to periods with more plentiful 
+    observations and still assume that the patterns are invariant. Ishii et al. [2005] use a 
+    simply-parameterized local covariance function for interpolation. Their optimal interpolation (OI) 
+    method was assessed by Hirahara et al. [2013] to have larger analysis uncertainties and larger 
+    cross-validation errors than the EOF-based COBE-2 analysis. However, the use of a simple optimal 
+    interpolation method has the advantage that it makes fewer assumptions regarding the stationarity of 
+    large-scale variability.
 </p><p>
-Another concern is that methods that use EOFs to describe the variability might inadvertently impose spurious long-range teleconnections that do not exist in the real world [Dommenget, 2007]. Smith et al. [2008] explicitly limit the range across which teleconnections can act. Liu et al. [2015] and Huang et al. [2016] varied the effective range and number of the teleconnections in their ensemble. Ishii et al. [2005] used a local covariance structure in their analysis. Analyses such as Kaplan et al. [1998] and Rayner et al. [2003] make the assumption that the EOFs retained in the analysis capture actual variability in the SST fields, but do not explicitly differentiate between variability that can be characterized purely in terms of local co-variability and large-scale teleconnections, though Rayner et al. [2003] reconstruct the Atlantic, Indo-Pacific and Southern Oceans separately. Karspeck et al. [2012] note that there is not a clear separation of scales and that joint estimation of local and large scale covariances is the logical way to approach the problem though this has not been done at a global level.
+Another concern is that methods that use EOFs to describe the variability might inadvertently impose 
+    spurious long-range teleconnections that do not exist in the real world [Dommenget, 2007]. Smith 
+    et al. [2008] explicitly limit the range across which teleconnections can act. Liu et al. [2015] 
+    and Huang et al. [2016] varied the effective range and number of the teleconnections in their ensemble. 
+    Ishii et al. [2005] used a local covariance structure in their analysis. Analyses such as Kaplan et 
+    al. [1998] and Rayner et al. [2003] make the assumption that the EOFs retained in the analysis 
+    capture actual variability in the SST fields, but do not explicitly differentiate between variability 
+    that can be characterized purely in terms of local co-variability and large-scale teleconnections, 
+    though Rayner et al. [2003] reconstruct the Atlantic, Indo-Pacific and Southern Oceans separately. 
+    Karspeck et al. [2012] note that there is not a clear separation of scales and that joint estimation 
+    of local and large scale covariances is the logical way to approach the problem though this has not 
+    yet been done at a global level.
 </p><p>
-Most, if not all, statistical methods have a tendency to lose variance either because they do not explicitly resolve small scale processes [Kaplan et al., 1998; Smith et al., 2008], because the method tends towards the climatological average in the absence of data [Ishii et al., 2005; Berry and Kent, 2011], or because they tend to smooth the data. Rayner et al. [2003] used the method of Kaplan et al. [1998] but blended high-quality gridded averages back into the reconstructed fields to improve small scale variability where observations were plentiful. Karspeck et al. [2012] analyzed the residual difference between the observations and the analysis of Kaplan et al. [1998] analysis using local non-stationary covariances, and then drew a range of samples from the posterior distribution in order to provide consistent variance at all times and locations. Liu et al. [2015] and Huang et al. [2016] assessed the effect of varying parameters which controlled the amount of small scale variability that was reconstructed and Huang et al. [2017] made specific changes to their analysis to ensure they reconstructed more small-scale variability.
+Most, if not all, statistical methods have a tendency to lose variance either because they do not 
+    explicitly resolve small scale processes [Kaplan et al., 1998; Smith et al., 2008], because the 
+    method tends towards the prior or climatological average in the absence of data [Ishii et al., 2005; Berry 
+    and Kent, 2011], or because they tend to smooth the data. Rayner et al. [2003] used the method of 
+    Kaplan et al. [1998] but blended high-quality gridded averages back into the reconstructed fields to 
+    improve small scale variability where observations were plentiful. Karspeck et al. [2012] analyzed 
+    the residual difference between the observations and the analysis of Kaplan et al. [1998] analysis 
+    using local non-stationary covariances, and then drew a range of samples from the posterior 
+    distribution in order to provide consistent variance at all times and locations. Liu et al. [2015] 
+    and Huang et al. [2016] assessed the effect of varying parameters which controlled the amount of 
+    small scale variability that was reconstructed and Huang et al. [2017] made specific changes to their 
+    analysis to ensure they reconstructed more small-scale variability.
 </p><p>
-One assumption common to most of the above analysis methods is that SST variability 
+One assumption common to many of the above analysis methods is that SST variability 
 can be decomposed into a small set of distinct patterns that can be combined linearly 
 to describe any SST field. However, it is well known that phenomena such as El Ni&ntilde;o and 
 La Ni&ntilde;a are not symmetric and that the equations that describe the evolution of SST are 
